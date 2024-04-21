@@ -1,0 +1,47 @@
+type Query {
+
+   findAllStudents: [Student]!
+   findById(id:Int): Student 
+   findAllEmployees: [Employee]!
+   
+}
+
+type Employee {
+	id: Int
+	emp_First_name: String
+	emp_last_name: String
+	address: Address
+	contact_number: Int
+	age: Int
+}
+
+type Address {
+	city_id: Int
+	street_name: String
+	state_name: String
+	pincode: Int
+}
+
+
+type Student {
+	id: Int
+	name: String
+	age: Int
+	address: String
+}
+
+type Mutation {
+	updateStudentAddress(student:StudentInput): MutationResponse!
+}
+
+input StudentInput {
+	id: Int
+	name: String
+	age: Int
+	address: String
+}
+
+type MutationResponse {
+	responseMessage:String!
+	responseStatusCode:Int!
+}
