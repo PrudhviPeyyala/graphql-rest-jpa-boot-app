@@ -18,7 +18,6 @@ public class Employee {
 	private int id;
 	private String emp_First_name;
 	private String emp_last_name;
-//	private String address;
 	private int contact_number;
 	private int age;
 	
@@ -49,12 +48,6 @@ public class Employee {
 	public void setEmp_last_name(String emp_last_name) {
 		this.emp_last_name = emp_last_name;
 	}
-//	public String getAddress() {
-//		return address;
-//	}
-//	public void setAddress(String address) {
-//		this.address = address;
-//	}
 	public int getContact_number() {
 		return contact_number;
 	}

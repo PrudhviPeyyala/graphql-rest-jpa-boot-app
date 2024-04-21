@@ -17,7 +17,6 @@ public class Address {
 	private String street_name;
 	private String state_name;
 	private int pincode;
-//	private int employee_id;
 	
 	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name = "employee_id",referencedColumnName = "id",insertable = false, updatable = false)
@@ -26,14 +25,6 @@ public class Address {
 	public int getCity_id() {
 		return city_id;
 	}
-
-//	public Employee getEmployee() {
-//		return employee;
-//	}
-//
-//	public void setEmployee(Employee employee) {
-//		this.employee = employee;
-//	}
 
 	public void setCity_id(int city_id) {
 		this.city_id = city_id;
